@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import ReactDOM from "react-dom";
 
+//Attempted using a web component for modal, but ran into issues.
 // declare global {
 //   namespace JSX {
 //     interface IntrinsicElements {
@@ -11,6 +12,7 @@ import ReactDOM from "react-dom";
 //     }
 //   }
 // }
+
 var timer: NodeJS.Timeout;
 
 
@@ -19,7 +21,6 @@ const Popup = () => {
   const [displayModal, setDisplayModal] = useState(false);
   const [username, setUsername] = useState("");
   const [loginStatus, setLoginStatus] = useState('logged-out');
-  const [showModal, setShowModal] = useState(false);
 
 const resetTimer = () => {
   clearTimeout(timer);
@@ -27,6 +28,7 @@ const resetTimer = () => {
 };
 
 const addIdleListener = () => {
+  //reset timer on set of event 
   window.addEventListener("load", resetTimer, true);
   var events = ["mousedown", "mousemove", "keypress", "scroll", "touchstart"];
   events.forEach(function (name) {
