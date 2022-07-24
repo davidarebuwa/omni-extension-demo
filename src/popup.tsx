@@ -1,7 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
 import ReactDOM from "react-dom";
-import '../dist/js/modal.js';
-import '../dist/js/alert.js';
 
 // declare global {
 //   namespace JSX {
@@ -41,7 +39,6 @@ if (!timer) {
   // add idle timer if timer is undefined
   addIdleListener();
 }
-
 
 
   const containerStyles = {
